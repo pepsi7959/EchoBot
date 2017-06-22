@@ -3,7 +3,7 @@ $access_token = 'HWbSOXBHsXaZ6ohJESJp7w9d8Nw6s1aqb7YUbx+yAZgr+JIUR/erXpUv2Wf5cC+
 
 function ask($msg){
 	global $access_token;
-	$url = 'http://ask.pannous.com/api?input='.$msg.'&locale=en_US&timeZone=420&login=test-user&ip=fe80:0:0:0:9068:1693:742:472&botid=0&key=guest&exclude=Dialogues,ChatBot&out=json&clientFeatures=show-images,reminder,say&debug=true';
+	$url = 'http://ask.pannous.com/api?input='.urlencode($msg).'&locale=en_US&timeZone=420&login=test-user&ip=fe80:0:0:0:9068:1693:742:472&botid=0&key=guest&exclude=Dialogues,ChatBot&out=json&clientFeatures=show-images,reminder,say&debug=true';
 	$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 	$ch = curl_init($url);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
