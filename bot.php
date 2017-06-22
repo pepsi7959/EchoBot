@@ -34,6 +34,11 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
+			$ec=mb_detect_encoding($text);
+			if ( $ec != "ASCII" ){
+				return;
+			}
+			
 			// Ask Pandora 
 			$answer = ask($text);
 			
