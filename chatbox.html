@@ -4,8 +4,8 @@
 <title>Chat Box</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="chatbox.css">
 </head>
 <body>
@@ -26,11 +26,11 @@
     </div>
         <div class="chatbox__body">
         <div class="chatbox__body__message chatbox__body__message--left">
-            <img src="http://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="Picture">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="Picture">
             <p>Hi, Can I help you?</p>
         </div>
 <!--         <div class="chatbox__body__message chatbox__body__message--right">
-            <img src="http://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg" alt="Picture">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg" alt="Picture">
             <p>Nulla vel turpis vulputate, tincidunt lectus sed, porta arcu.</p>
         </div> -->
     </div>
@@ -78,12 +78,12 @@ function ask(){
             if( e.which == 13){
                $umsg = $chatboxMessage.val();
                $chatboxMessage.val("");
-               $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--right\"> <img src=\"http://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg\" alt=\"Picture\"> <p>"+$umsg+"</p></div>");
+               $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--right\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg\" alt=\"Picture\"> <p>"+$umsg+"</p></div>");
 
-               $.ajax({url: "http://ask.pannous.com/api?input="+$umsg+"&locale=en_US&timeZone=420&login=test-user&ip=fe80:0:0:0:9068:1693:742:472&botid=0&key=guest&exclude=Dialogues,ChatBot&out=json&clientFeatures=show-images,reminder,say&debug=true", success: function(result){
+               $.ajax({url: "https://ask.pannous.com/api?input="+$umsg+"&locale=en_US&timeZone=420&login=test-user&ip=fe80:0:0:0:9068:1693:742:472&botid=0&key=guest&exclude=Dialogues,ChatBot&out=json&clientFeatures=show-images,reminder,say&debug=true", success: function(result){
                 console.log(result.output[0].actions.say.text);
 
-            $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--left\"> <img src=\"http://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg\" alt=\"Picture\"> <p>"+result.output[0].actions.say.text+"</p></div>");
+            $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--left\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg\" alt=\"Picture\"> <p>"+result.output[0].actions.say.text+"</p></div>");
 
         }});
 
