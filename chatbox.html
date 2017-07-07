@@ -26,13 +26,9 @@
     </div>
         <div class="chatbox__body">
         <div class="chatbox__body__message chatbox__body__message--left">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="Picture">
+            <img src="https://avatars3.githubusercontent.com/u/7160640?v=3&s=460\" alt="Picture">
             <p>Hi, Can I help you?</p>
         </div>
-<!--         <div class="chatbox__body__message chatbox__body__message--right">
-            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg" alt="Picture">
-            <p>Nulla vel turpis vulputate, tincidunt lectus sed, porta arcu.</p>
-        </div> -->
     </div>
     <form class="chatbox__credentials">
         <div class="form-group">
@@ -78,10 +74,10 @@ function ask(){
             if( e.which == 13){
                $umsg = $chatboxMessage.val();
                $chatboxMessage.val("");
-               $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--right\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/arashmil/128.jpg\" alt=\"Picture\"> <p>"+$umsg+"</p></div>");
+               $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--right\"> <img src=\"peple.png" alt=\"Picture\"> <p>"+$umsg+"</p></div>");
                 $.ajax({url: "ask.php?question="+$umsg, success: function ask(result){
                     console.log(result);                
-                    $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--left\"> <img src=\"https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg\" alt=\"Picture\"> <p>"+result+"</p></div>");
+                    $(".chatbox__body").append("<div class=\"chatbox__body__message chatbox__body__message--left\"> <img src=\"https://avatars3.githubusercontent.com/u/7160640?v=3&s=460\" alt=\"Picture\"> <p>"+result+"</p></div>");
                 }});
                $(".chatbox__body").scrollTop($(".chatbox__body")[0].scrollHeight);
             }
